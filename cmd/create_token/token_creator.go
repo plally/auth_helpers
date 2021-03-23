@@ -13,6 +13,8 @@ import (
 var pkeyFilename = flag.String("pkey", "", "private key to sign created token with")
 var subject = flag.String("sub", "", "claims subject")
 func main() {
+	flag.parse()
+
 	pkey, err := auth.ReadPrivateKey(*pkeyFilename)
 	if err != nil {
 		log.Fatal(err)
