@@ -6,8 +6,7 @@ import (
 	"io/ioutil"
 )
 
-
-func ReadPublicKey(filename string) (*rsa.PublicKey, error){
+func ReadPublicKey(filename string) (*rsa.PublicKey, error) {
 	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		return nil, err
@@ -16,7 +15,7 @@ func ReadPublicKey(filename string) (*rsa.PublicKey, error){
 	return jwt.ParseRSAPublicKeyFromPEM(data)
 }
 
-func ReadPrivateKey(filename string) (*rsa.PrivateKey, error){
+func ReadPrivateKey(filename string) (*rsa.PrivateKey, error) {
 	data, err := ioutil.ReadFile(filename)
 	if err != nil {
 		return nil, err
