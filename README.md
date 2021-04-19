@@ -1,3 +1,1 @@
-# vulpes_authenticator
-
-a simple utility for creating and validationg jwt tokens
+# a command for creating jwts for testing and some helpers for use in grpc services 
